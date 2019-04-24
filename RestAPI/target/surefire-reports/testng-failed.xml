@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="Com.Test.GetAPITest">
+        <methods>
+          <include name="SetUp"/>
+          <include name="getAPITestWithoutHeaders"/>
+        </methods>
+      </class> <!-- Com.Test.GetAPITest -->
+      <class name="Com.Test.PostAPITest">
+        <methods>
+          <include name="SetUp"/>
+          <include name="postApiTest"/>
+        </methods>
+      </class> <!-- Com.Test.PostAPITest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

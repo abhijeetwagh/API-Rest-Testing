@@ -1,0 +1,20 @@
+package Com.OrangeHRMTest;
+
+import java.util.logging.Logger;
+
+public class Test {
+
+	public static Logger logger = Logger.getLogger(Test.class.getName());
+	
+	
+	//logs a debug message
+		if(logger.isDebugEnabled()){
+		    logger.debug("This is debug");
+		}
+		
+		//logs an error message with parameter
+		logger.error("This is error : " + parameter);
+		
+		//logs an exception thrown from somewhere
+		logger.error("This is error", exception);
+}

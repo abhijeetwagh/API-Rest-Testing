@@ -1,0 +1,17 @@
+package Com.Test;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+
+import Com.client.restClient;
+import Com.restApi.testBase;
+
+public class PostAPITest extends testBase {
+
+	testBase testbase;
+	String serviceUrl;
+	String url;
+	String apiUrl;
+	restClient restclient;
+	CloseableHttpResponse closeableHttpResponse;
+	
+}

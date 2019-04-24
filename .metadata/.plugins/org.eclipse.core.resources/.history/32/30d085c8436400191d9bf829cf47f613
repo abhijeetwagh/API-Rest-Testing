@@ -1,0 +1,47 @@
+package Com.client;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.apache.http.Header;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class restClient {
+
+	// 1. GET Method
+	public void get(String url) throws ClientProtocolException, IOException, JSONException {
+
+		CloseableHttpClient httpclient = HttpClients.createDefault(); // Create default method will create client connection & it will return
+										// closableClient class object
+		
+		HttpGet httpget = new HttpGet(url); //it will create one get connection with this particular URL
+		
+		CloseableHttpResponse closeableHttpResponse = httpclient.execute(httpget); //hit the GET URL 
+		
+		int statuscode = closeableHttpResponse.getStatusLine().getStatusCode();
+		 System.out.println("StatusCode: "+statuscode);
+		 
+		 String ResponseString = EntityUtils.toString(closeableHttpResponse.getEntity(),"UTF-8");
+		 
+		 JSONObject responseJson = new JSONObject(ResponseString);
+		 System.out.println("Response JSON from API"+ responseJson);
+		 
+		Header[] headerArray =  closeableHttpResponse.getAllHeaders();
+        
+		HashMap<String, String> allheaders = new HashMap<String, String>();
+		
+		for(Header header : headerArray){
+			allheaders.put(header.getName(), header.getValue());
+		}
+ 	
+	
+	
+	}
+}

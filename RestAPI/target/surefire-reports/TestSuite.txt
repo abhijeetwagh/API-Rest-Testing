@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 122.23 sec <<< FAILURE!
+postApiTest(Com.Test.PostAPITest)  Time elapsed: 33.677 sec  <<< FAILURE!
+java.lang.AssertionError: expected [201] but found [522]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at Com.Test.PostAPITest.postApiTest(PostAPITest.java:65)
+
+getAPITestWithoutHeaders(Com.Test.GetAPITest)  Time elapsed: 60.73 sec  <<< FAILURE!
+java.lang.AssertionError: Status code is not 200 expected [200] but found [504]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at Com.Test.GetAPITest.getAPITestWithoutHeaders(GetAPITest.java:50)
+

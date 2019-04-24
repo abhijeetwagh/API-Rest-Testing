@@ -1,0 +1,9 @@
+package Com.OrangeHRMTest;
+
+public class HelloTest {
+
+	
+	public void HelloPrint(){
+		System.out.println("Hello");
+	}
+}

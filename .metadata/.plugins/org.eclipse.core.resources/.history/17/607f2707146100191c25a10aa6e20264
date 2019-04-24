@@ -1,0 +1,14 @@
+package Com.OrangeHRMTest;
+
+public class TestNGAnnotationsTest {
+
+	@Before Test
+	    public void beforeTest(){
+	        System.out.println("From BeforeTest annotation in SampleTestngUsage class ..");
+	    }
+
+	@BeforeSuite
+	public void beforeSuite() {
+		System.out.println("From BeforeSuite annotation in SampleTestngUsage class ..");
+	}
+}

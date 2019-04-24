@@ -1,0 +1,15 @@
+package Com.restApi;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class testBase {
+
+	Properties prop;
+
+	public testBase() {
+
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream("F:\\WSTEST\\RestAPI\\src\\main\\java\\Com\\Config\\config.properties");
+	}
+}

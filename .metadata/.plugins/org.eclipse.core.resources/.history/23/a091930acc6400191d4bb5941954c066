@@ -1,0 +1,25 @@
+package Com.restApi;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+public class testBase {
+
+	public Properties prop;
+
+	public testBase() {
+
+		prop = new Properties();
+		try {
+			FileInputStream fis = new FileInputStream("F:\\WSTEST\\RestAPI\\src\\main\\java\\Com\\Config\\config.properties");
+			prop.load(fis);
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+}

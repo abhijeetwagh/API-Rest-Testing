@@ -1,0 +1,5 @@
+package Com.Test;
+
+public @interface BeforeMethod {
+
+}

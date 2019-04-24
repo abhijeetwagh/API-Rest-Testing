@@ -1,0 +1,11 @@
+package Com.OrangeHRMTest;
+
+import java.util.logging.Logger;
+
+public class Test {
+
+	public static Logger logger = Logger.getLogger(Test.class.getName());
+	
+	
+	
+}

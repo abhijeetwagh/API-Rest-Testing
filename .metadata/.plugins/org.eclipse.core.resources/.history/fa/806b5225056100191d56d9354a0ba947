@@ -1,0 +1,32 @@
+package Com.OrangeHRMTest;
+
+import java.util.logging.Logger;
+
+public class Test {
+
+	final static Logger logger = Logger.getLogger(Test.class.getName());
+	
+	public static void main(String[] args) {
+		
+		Test obj = new Test();
+		obj.runMe("Hello");
+		
+	}
+	
+	private void runMe(String parameter){
+		
+		if(logger.isDebugEnabled()){
+			logger.debug("This is debug : " + parameter);
+		}
+		
+		if(logger.isInfoEnabled()){
+			logger.info("This is info : " + parameter);
+		}
+		
+		logger.warn("This is warn : " + parameter);
+		logger.error("This is error : " + parameter);
+		logger.fatal("This is fatal : " + parameter);
+		
+	}
+	
+}

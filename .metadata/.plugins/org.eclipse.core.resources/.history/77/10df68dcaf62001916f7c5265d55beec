@@ -1,0 +1,35 @@
+package Com.OrangeHRMTest;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class WebElementsList {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\USER\\Downloads\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.toolsqa.com/automation-practice-form/");
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		
+
+		List <WebElement> elementlist = driver.findElements(By.name("continents"));
+		int listSize = elementlist.size();
+		for(int i=1;i<=listSize;i++){
+			elementlist.get(i).click();
+			System.out.println(i);
+		}
+		Select select=new Select(driver.findElement(By.id("continents")));
+        select.selectByVisibleText("Europe");   
+	driver.close();
+	}
+
+}

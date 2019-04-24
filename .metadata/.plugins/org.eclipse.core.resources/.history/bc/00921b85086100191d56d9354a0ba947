@@ -1,0 +1,23 @@
+package Com.OrangeHRMTest;
+
+import java.util.logging.Logger;
+
+public class Test {
+
+	final static Logger logger = Logger.getLogger(Test.class.getName());
+	
+	public static void main(String[] args) {
+		
+		logger.info("Name " + "MoB.No");
+		
+		Test obj = new Test();
+		obj.runMe("Com.OrangeHRMTest");
+		
+	}
+
+	private void runMe(String parameter) {
+		logger.info(parameter);
+		
+	}
+	
+}

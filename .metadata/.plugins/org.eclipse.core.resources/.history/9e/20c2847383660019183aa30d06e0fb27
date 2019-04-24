@@ -1,0 +1,26 @@
+package Com.OrangeHRMTest;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.internal.WrapsDriver;
+
+public class TextWithoutUsingSendKeys {
+
+	public static void main(String[] args) {
+
+	}
+
+	private static Object[] setAttribute(WebElement element, String attributeName, String Value) {
+
+		WebDriver driver = new ChromeDriver();
+		WrapsDriver wrappedElement = (WrapsDriver) element;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		wrappedElement.getWrappedDriver();
+		executor.executeScript("arguments[0]", setAttribute(element, attributeName, Value));
+		return null;
+
+	}
+
+}

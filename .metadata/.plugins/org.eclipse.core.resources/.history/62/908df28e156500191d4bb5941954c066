@@ -1,0 +1,15 @@
+package Com.data;
+
+public class Users {
+
+	String name;
+	String job;
+	
+	 public Users(){
+		 
+	 }
+	 
+	 public Users(){
+		 
+	 }
+}

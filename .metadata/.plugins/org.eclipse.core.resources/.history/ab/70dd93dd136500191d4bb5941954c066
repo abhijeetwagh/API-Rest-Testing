@@ -1,0 +1,7 @@
+package Com.Test;
+
+import Com.restApi.testBase;
+
+public class PostAPITest extends testBase {
+
+}

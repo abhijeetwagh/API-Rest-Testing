@@ -1,0 +1,86 @@
+package Com.client;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.http.Header;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class restClient {
+
+	// 1. GET Method without HEADERs
+	public CloseableHttpResponse get(String url) throws ClientProtocolException, IOException, JSONException {
+		
+	CloseableHttpClient httpclient = HttpClients.createDefault(); // Create default method  will create client connection  & it will return closableClient class object
+	
+	HttpGet httpget = new HttpGet(url); // it will create one get connection with this particular URL
+	
+    CloseableHttpResponse closeableHttpResponse = httpclient.execute(httpget); // hit the GET URL
+    
+    return closeableHttpResponse;
+    
+	}
+    
+	// 2. GET Method with HEADERs
+	public CloseableHttpResponse get(String url, HashMap<String, String>hashmap) throws ClientProtocolException, IOException, JSONException {
+		
+	CloseableHttpClient httpclient = HttpClients.createDefault(); // Create default method  will create client connection  & it will return closableClient class object
+	
+	HttpGet httpget = new HttpGet(url); // it will create one get connection with this particular URL
+	
+	for(Map.Entry<String, String> entry : hashmap.entrySet()){
+		httpget.addHeader(entry.getKey(), entry.getValue());
+	}
+	
+    CloseableHttpResponse closeableHttpResponse = httpclient.execute(httpget); // hit the GET URL
+    
+    return closeableHttpResponse;
+																					
+		/*// a. Status Code
+		int statuscode = closeableHttpResponse.getStatusLine().getStatusCode();
+		System.out.println("StatusCode: " + statuscode);
+
+		// b. JSON String
+		String ResponseString = EntityUtils.toString(closeableHttpResponse.getEntity(),"UTF-8");
+
+		JSONObject responseJson = new JSONObject(ResponseString);
+		System.out.println("Response JSON from API" + responseJson);
+
+		// c. all headers
+		Header[] headerArray = closeableHttpResponse.getAllHeaders();
+
+		HashMap<String, String> allheaders = new HashMap<String, String>();
+
+		for (Header header : headerArray) {
+			allheaders.put(header.getName(), header.getValue());
+		}
+
+		System.out.println("Headers Array-->" + allheaders);*/
+	}
+	
+	//3. POST Method :
+	public void post(String url,String entityString,HashMap<String, String>headrMap) throws UnsupportedEncodingException{
+		
+		CloseableHttpClient httpclient = HttpClients.createDefault(); // Create default method  will create client connection  & it will return closableClient class object
+		HttpPost httpPost = new HttpPost(); // http POST request
+		httpPost.setEntity(new StringEntity(entityString)); // setEntity method is used to define the payload
+		
+		
+		
+		
+		
+		
+	}
+}
+

@@ -1,0 +1,9 @@
+package Com.OrangeHRMTest;
+
+public class TestNGAnnotationsTest {
+
+	@Test
+	public void test(String parameter){
+		System.out.println("Test" +);
+	}
+}

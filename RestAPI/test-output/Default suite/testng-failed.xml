@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Com.Test.PostAPITest">
+      <class name="Com.Test.DeleteAPITest">
         <methods>
+          <include name="deleteAPITest"/>
           <include name="SetUp"/>
-          <include name="postApiTest"/>
         </methods>
-      </class> <!-- Com.Test.PostAPITest -->
+      </class> <!-- Com.Test.DeleteAPITest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

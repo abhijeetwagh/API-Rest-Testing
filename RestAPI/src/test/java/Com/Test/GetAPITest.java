@@ -88,6 +88,8 @@ public class GetAPITest extends testBase {
 
 		System.out.println("Headers Array-->" + allheaders);
 	}
+	
+	
 
 	@Test(priority = 2)
 	public void getAPITestwitHeaders() throws ClientProtocolException, IOException, JSONException {

@@ -6,8 +6,10 @@ import java.util.Map;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -82,5 +84,36 @@ public class restClient {
 		
 		
 	}
+	
+	//3. PUT Method :
+		public CloseableHttpResponse PUT(String url,String entityString,HashMap<String, String>headerMap) throws ClientProtocolException, IOException{
+			
+			CloseableHttpClient httpclient = HttpClients.createDefault(); // Create default method  will create client connection  & it will return closableClient class object
+			HttpPut httpPut = new HttpPut(url); // http PUT request
+			httpPut.setEntity(new StringEntity(entityString)); // setEntity method is used to define the payload
+			
+			// For Headers
+			for(Map.Entry<String, String> entry : headerMap.entrySet()){
+				httpPut.addHeader(entry.getKey(), entry.getValue());
+			}
+			
+			CloseableHttpResponse closeableHttpResponse = httpclient.execute(httpPut); //Execute the request
+			return closeableHttpResponse;
+			
+			
+		}
+		
+		// 4. DELETE Method
+		public CloseableHttpResponse delete(String url) throws ClientProtocolException, IOException, JSONException {
+			
+		CloseableHttpClient httpclient = HttpClients.createDefault(); // Create default method  will create client connection  & it will return closableClient class object
+		
+		HttpDelete httpdelete = new HttpDelete(url); // it will create one get connection with this particular URL
+		
+	    CloseableHttpResponse closeableHttpResponse = httpclient.execute(httpdelete); // hit the DELETE URL
+	    
+	    return closeableHttpResponse;
+	    
+		}
 }
 

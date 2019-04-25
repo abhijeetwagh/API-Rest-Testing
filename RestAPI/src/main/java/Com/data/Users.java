@@ -7,8 +7,18 @@ public class Users {
 	String job;
 	String id;
 	String createdAt;
+	String updatedAt;
 
 	// getters & setters methods
+
+	public String getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(String updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -48,6 +58,8 @@ public class Users {
 	public Users(String name, String job) {
 		this.name = name;
 		this.job = job;
+		//this.updatedAt = updatedAt;
+
 	}
 
 }

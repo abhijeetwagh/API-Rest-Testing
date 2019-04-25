@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52227" started-at="2019-04-22T18:07:19Z" finished-at="2019-04-22T18:08:11Z">
+  <suite name="Default suite" duration-ms="2167" started-at="2019-04-25T08:54:27Z" finished-at="2019-04-25T08:54:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52227" started-at="2019-04-22T18:07:19Z" finished-at="2019-04-22T18:08:11Z">
-      <class name="Com.Test.PostAPITest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Com.Test.PostAPITest@7823a2f9]" name="SetUp" is-config="true" duration-ms="15" started-at="2019-04-22T23:37:19Z" finished-at="2019-04-22T23:37:19Z">
+    <test name="Default test" duration-ms="2167" started-at="2019-04-25T08:54:27Z" finished-at="2019-04-25T08:54:29Z">
+      <class name="Com.Test.DeleteAPITest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:Com.Test.DeleteAPITest@7dc7cbad]" name="SetUp" is-config="true" duration-ms="9" started-at="2019-04-25T14:24:27Z" finished-at="2019-04-25T14:24:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="postApiTest()[pri:0, instance:Com.Test.PostAPITest@7823a2f9]" name="postApiTest" duration-ms="52158" started-at="2019-04-22T23:37:19Z" finished-at="2019-04-22T23:38:11Z">
+        <test-method status="PASS" signature="deleteAPITest()[pri:0, instance:Com.Test.DeleteAPITest@7dc7cbad]" name="deleteAPITest" duration-ms="2127" started-at="2019-04-25T14:24:27Z" finished-at="2019-04-25T14:24:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postApiTest -->
-      </class> <!-- Com.Test.PostAPITest -->
+        </test-method> <!-- deleteAPITest -->
+      </class> <!-- Com.Test.DeleteAPITest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
